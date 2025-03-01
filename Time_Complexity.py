@@ -9,7 +9,7 @@ class Solution(object):
 {Time Complexity} = O(n)
 
 
-- Arithemtic operations are all linear 
+- Arithmetic operations are all linear 
 - iterating through the list once is linear 
 - finding the length is a one time operation
 - append is a one time operation hence linear
@@ -29,7 +29,32 @@ def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
 
     return res
 
-
 {Time Complexity} = O(n)
+
+
+
+
+def twoSum(nums, target):
+    # Create a dictionary to store the difference (complement) and its index
+    num_map = {}
+    
+    # Loop through the list of numbers
+    for i, num in enumerate(nums):
+        # Calculate the complement (the number that when added to num gives target)
+        complement = target - num
+        
+        # If the complement exists in the dictionary, we've found the pair
+        if complement in num_map:
+            # Return the indices of the two numbers
+            return [num_map[complement], i]
+        
+        # Otherwise, store the current number and its index in the dictionary
+        num_map[num] = i
+    
+    # If no solution is found (though problem guarantees one solution)
+    return None
+
+
+
 
 
