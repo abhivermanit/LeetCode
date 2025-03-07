@@ -1,4 +1,4 @@
-# Linked List 
+ # Linked List 
 
 # Create a Node class to create a node
 class Node:
@@ -20,11 +20,11 @@ class LinkedList:  # Class to form a linked list
     # Method to add a node at any index
     # Indexing starts from 0.
     def insertAtIndex(self, data, index):
-        if index == 0:
+        if index == 0:  #  the new node should be inserted at the beginning.
             self.insertAtBegin(data)
             return
 
-        position = 0
+        position = 0  # keeps track of the current index during traversal.
         current_node = self.head
         while current_node is not None and position + 1 != index:
             position += 1
