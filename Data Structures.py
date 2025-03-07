@@ -4,18 +4,18 @@
 class Node:
     def __init__(self, data):
         self.data = data
-        self.next = None
+        self.next = None # Initially when a node is created it does not point to any other node
 
 # Create a LinkedList class
-class LinkedList:
+class LinkedList:  # Class to form a linked list
     def __init__(self):
-        self.head = None
+        self.head = None # If head is None, it means the linked list is empty.
 
     # Method to add a node at the beginning of the LL
     def insertAtBegin(self, data):
-        new_node = Node(data)
-        new_node.next = self.head
-        self.head = new_node
+        new_node = Node(data) # data being stored in the node created 
+        new_node.next = self.head # value of head is current node because this is the first node
+        self.head = new_node # value of head is changed to the next node
 
     # Method to add a node at any index
     # Indexing starts from 0.
