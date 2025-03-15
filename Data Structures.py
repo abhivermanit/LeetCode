@@ -2,7 +2,7 @@
 
 # Create a Node class to create a node
 class Node:
-    def __init__(self, data):
+    def __init__(self, data, next=None): #next will be None until not provided by the user
         self.data = data
         self.next = None # Initially when a node is created it does not point to any other node
 
@@ -143,6 +143,13 @@ class LinkedList:  # Class to form a linked list
             current_node = current_node.next
 
 
+How to use this linked list 
+
+node1 = Node(10)                # First node (next defaults to None)
+node2 = Node(20, node1)    
+
+The above is how we will call the class and create an object(node) . Other class is for linked list, 
+
 # create a new linked list
 llist = LinkedList()
 
@@ -181,4 +188,10 @@ llist.printLL()
 print("\nSize of linked list:", llist.sizeOfLL())
 
 
+- capacity for the list allocated 
+- when inserting it will put the values 
+- inserting in between to create space many operations 
+- dynamic array allocates *2 memory locations 
+- don't have to copy values unlike array in linked list 
+- so no need to pre-allocate space and insertion is easier
 
