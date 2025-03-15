@@ -195,3 +195,39 @@ print("\nSize of linked list:", llist.sizeOfLL())
 - don't have to copy values unlike array in linked list 
 - so no need to pre-allocate space and insertion is easier
 
+
+In Python, variables do not hold actual objects; they hold references (memory addresses) to those objects.
+
+The newest node always becomes the head (the first node).
+
+The older nodes get pushed further down the list.
+
+This means the first node you insert will be at the end of the list.
+
+class LinkedList:  # Class to form a linked list
+    def __init__(self):
+        self.head = None # If head is None, it means the linked list is empty.
+
+    # Method to add a node at the beginning of the LL
+    def insertAtBegin(self, data):
+        new_node = Node(data) # data being stored in the node created 
+        new_node.next = self.head # value of head is current node because this is the first node
+        self.head = new_node
+
+Now look, 
+
+[30] → [20] → [10] → None 
+
+This is how it will happen, so the first node has head 10 and no next, in the following iteration 20 will now be the head, 10 will be pushed and 10 will become the next for
+the new node -> self.head → [20 | next] → [10 | None] # something like this 
+
+So basically next is pointing towards the node with head 10. 
+
+C – Uses pointers explicitly for memory references.
+
+C++ – Supports both references (easier to use) and pointers (more manual control).
+
+Python – Objects are referenced, primitives (like int, float) are passed by value.
+
+Java – Objects (instances of classes) are referenced; primitive types (e.g., int, float, boolean) are by value.
+
