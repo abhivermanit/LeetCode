@@ -28,10 +28,10 @@ root = Node(1)
 # of a binary tree.
 
 class Node:
-    def __init__(self, x):   # this constructor is initializing a node in the class
+    def __init__(self, x):   # This constructor is initializing a node in the class
         self.data = x
         self.left = None
-        self.right = None
+        self.right = None 
 
 # Recursive function to find the 
 # size of binary tree.
