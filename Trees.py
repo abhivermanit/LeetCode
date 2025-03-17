@@ -17,7 +17,7 @@ class Node:
         self.data = x
         self.left = None
         self.right = None
-# Below are the values by calling the node class. 
+# Below are the values by calling the node class and storing them in variable root which is indirectly calling the getSize function
 root = Node(1)
     root.left = Node(2)
     root.right = Node(3)
