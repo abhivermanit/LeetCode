@@ -41,7 +41,7 @@ def getSize(root):
 
     # Find the size of left and right 
     # subtree.
-    left = getSize(root.left) # This is recusrsion because the function getSize is getting called within the function
+    left = getSize(root.left) # This is recursion because the function getSize is getting called within the function
     right = getSize(root.right)
 
     # return the size of curr subtree.
