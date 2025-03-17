@@ -62,3 +62,19 @@ if __name__ == "__main__":
     root.left.right = Node(5)
 
     print(getSize(root))
+
+
+
+Summary of Function Calls
+Call #	Function Call	Node	Action	                   Return Value
+1	getSize(root)	1	Calls getSize(root.left) (node 2)	5
+2	getSize(root.left)	2	Calls getSize(root.left) (node 4)	3
+3	getSize(root.left)	4	Calls getSize(root.left) (None)	1
+4	getSize(root.left)	None	Base case: returns 0	0
+5	getSize(root.right)	None	Base case: returns 0	0
+6	getSize(root.right)	5	Calls getSize(root.left) (None)	1
+7	getSize(root.left)	None	Base case: returns 0	0
+8	getSize(root.right)	None	Base case: returns 0	0
+9	getSize(root.right)	3	Calls getSize(root.left) (None)	1
+10	getSize(root.left)	None	Base case: returns 0	0
+11	getSize(root.right)	None	Base case: returns 0	0
