@@ -47,6 +47,16 @@ def getSize(root):
     # return the size of curr subtree.
     return left + right + 1
 
+def height(root):
+    if root is None:
+        return -1
+
+    # compute the height of left and right subtrees
+    lHeight = height(root.left)
+    rHeight = height(root.right)
+
+    return max(lHeight, rHeight) + 1
+
 if __name__ == "__main__":
 
     # Constructed binary tree is
